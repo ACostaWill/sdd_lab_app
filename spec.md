@@ -186,7 +186,10 @@ The backend **MAY** cache extraction results in-process **only if** caching is k
 
 ## 9. Frontend (Streamlit)
 
-The frontend **MUST** provide two pages:
+The frontend:
+
+- **MUST** provide two pages: an Add page (§9.1) and a Library page (§9.2).
+- **MUST** hide Streamlit's "Deploy" button and other developer-facing toolbar controls. This **MUST** be implemented by committing a project-level `.streamlit/config.toml` containing `[client]` `toolbarMode = "minimal"`. The config file **MUST** be tracked in git (i.e. not gitignored).
 
 ### 9.1 Add page (default)
 
